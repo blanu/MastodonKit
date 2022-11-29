@@ -52,6 +52,8 @@ public struct Account: Codable, Hashable {
     /// use `[Emoji]?` as storage and use `[Emoji]` as public API.
     private let _emojis: [Emoji]?
 
+    let fields: [Field]?
+
     private enum CodingKeys: String, CodingKey {
         case id
         case username
@@ -69,5 +71,13 @@ public struct Account: Codable, Hashable {
         case followingCount = "following_count"
         case statusesCount = "statuses_count"
         case _emojis = "emojis"
+        case fields
     }
+}
+
+public struct Field: Equatable, Hashable, Codable
+{
+    let name: String
+    let value: String
+    let verfied_at: Date?
 }
