@@ -52,7 +52,7 @@ public struct Account: Codable, Hashable {
     /// use `[Emoji]?` as storage and use `[Emoji]` as public API.
     private let _emojis: [Emoji]?
 
-    let fields: [Field]?
+    public let fields: [Field]?
 
     private enum CodingKeys: String, CodingKey {
         case id
