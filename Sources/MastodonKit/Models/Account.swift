@@ -77,7 +77,7 @@ public struct Account: Codable, Hashable {
 
 public struct Field: Equatable, Hashable, Codable
 {
-    let name: String
-    let value: String
-    let verfied_at: Date?
+    public let name: String
+    public let value: String
+    public let verfied_at: Date?
 }
